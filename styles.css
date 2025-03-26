@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: auto;
+    background-color: rgb(82, 53, 53);
+    gap: 10px;
+    border-radius: 10px;
+    border: solid;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button {
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    border: solid;
+}
+
+.button.zero {
+    flex: 1;
+}
+
+.show {
+    height: 200px;
+    width: 315px;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border: solid;
+}
+
+.dispNum {
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 50px;
+}
+
+.bucket {
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 20px;
+    opacity: 60%;
+}
