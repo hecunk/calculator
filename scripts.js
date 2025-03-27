@@ -4,25 +4,33 @@ let state = "normal";
 function operate(num1, num2, operand) {
     switch (operand) {
         case "+":
-            return num1 + num2;
+            if ((num1+num2).toString().length < 12) {
+                return num1 + num2;
+            }
+            else {
+                return Number.parseFloat(num1 + num2).toExponential(3);
+            }
             break;
         case "-":
-            return num1 - num2;
+                return num1 - num2;
             break;
         case "*":
-            if ((num1*num2).toString().length < 11) {
+            if ((num1*num2).toString().length < 12) {
                 return num1 * num2;
             }
             else {
-            return Number.parseFloat(num1 * num2).toExponential(3);
+                return Number.parseFloat(num1 * num2).toExponential(3);
             }
             break;
         case "/":
             if ((num1/num2).toString().length < 12) {
                 return num1 / num2;
             }
+            else if (((num1 / num2).toFixed(9)).toString().length < 12){
+                return Number.parseFloat(num1 / num2).toFixed(9);
+            }
             else {
-            return (num1 / num2).toFixed(9);
+                return Number.parseFloat(num1 / num2).toExponential(3);
             }
             break;
     }
